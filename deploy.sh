@@ -30,7 +30,7 @@ echo "🌐 Step 2: Deploying to eclabs-vm06..."
 ssh eclabs-vm06 "cd /var/kunden/webs/ruben/www/choco-select.z11.de/ && \
     git pull origin main && \
     echo '📦 Installing dependencies...' && \
-    npm install && \
+    npm install --legacy-peer-deps && \
     echo '🔨 Building React app...' && \
     npm run build && \
     echo '📂 Moving build files to root...' && \
