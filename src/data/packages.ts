@@ -82,10 +82,14 @@ export const packages: Package[] = [
   { id: 'keepass', name: 'KeePass 2', description: 'Password Manager', category: 'Other', icon: 'keepass', chocoPackage: 'keepass' },
   { id: 'everything', name: 'Everything', description: 'Local File Search Engine', category: 'Other', icon: 'everything', chocoPackage: 'everything' },
 
+  // Remote Access
+  { id: 'anydesk', name: 'AnyDesk', description: 'Remote Desktop', category: 'Remote Access', icon: 'anydesk', chocoPackage: 'anydesk' },
+  { id: 'teamviewer', name: 'TeamViewer 15', description: 'Remote Access Tool', category: 'Remote Access', icon: 'teamviewer', chocoPackage: 'teamviewer' },
+  { id: 'realvnc', name: 'RealVNC', description: 'RealVNC Remote Access', category: 'Remote Access', icon: 'realvnc', chocoPackage: 'realvnc' },
+  { id: 'ultravnc', name: 'UltraVNC', description: 'UltraVNC Remote Access', category: 'Remote Access', icon: 'ultravnc', chocoPackage: 'ultravnc' },
+  { id: 'rustdesk', name: 'RustDesk', description: 'Open Source Remote Desktop', category: 'Remote Access', icon: 'rustdesk', chocoPackage: 'rustdesk' },
+
   // Utilities
-  { id: 'anydesk', name: 'AnyDesk', description: 'Remote Desktop', category: 'Utilities', icon: 'anydesk', chocoPackage: 'anydesk' },
-  { id: 'teamviewer', name: 'TeamViewer 15', description: 'Remote Access Tool', category: 'Utilities', icon: 'teamviewer', chocoPackage: 'teamviewer' },
-  { id: 'realvnc', name: 'RealVNC', description: 'RealVNC Remote Access', category: 'Utilities', icon: 'realvnc', chocoPackage: 'realvnc' },
   { id: 'imgburn', name: 'ImgBurn', description: 'Disc Burner', category: 'Utilities', icon: 'imgburn', chocoPackage: 'imgburn' },
   { id: 'teracopy', name: 'TeraCopy', description: 'Better File Copy', category: 'Utilities', icon: 'teracopy', chocoPackage: 'teracopy' },
   { id: 'cdburnerxp', name: 'CDBurnerXP', description: 'Disc Burner', category: 'Utilities', icon: 'cdburnerxp', chocoPackage: 'cdburnerxp' },
@@ -113,9 +117,10 @@ export const packages: Package[] = [
   { id: 'eclipse', name: 'Eclipse', description: 'IDE for Java', category: 'Developer Tools', icon: 'eclipse', chocoPackage: 'eclipse' },
   { id: 'vscode', name: 'Visual Studio Code', description: 'Programmer\'s Editor', category: 'Developer Tools', icon: 'vscode', chocoPackage: 'vscode' },
   { id: 'cursor', name: 'Cursor', description: 'Programmer\'s Editor', category: 'Developer Tools', icon: 'cursor', chocoPackage: 'cursor' },
+  { id: 'javaruntime', name: 'Java Runtime (JRE)', description: 'Java Runtime Environment', category: 'Developer Tools', icon: 'java', chocoPackage: 'javaruntime' },
+  { id: 'jdk', name: 'Java SDK (JDK)', description: 'Java Development Kit', category: 'Developer Tools', icon: 'java', chocoPackage: 'openjdk' },
   
   // Additional Tools
-  { id: 'rustdesk', name: 'RustDesk', description: 'Open Source Remote Desktop', category: 'Utilities', icon: 'rustdesk', chocoPackage: 'rustdesk' },
   { id: 'totalcommander', name: 'Total Commander', description: 'File Manager', category: 'Utilities', icon: 'totalcommander', chocoPackage: 'totalcommander' },
   { id: 'affinity', name: 'Affinity Designer', description: 'Professional Graphic Design', category: 'Imaging', icon: 'affinity', chocoPackage: 'affinity-designer' },
 ];
@@ -130,6 +135,7 @@ export const categoryKeys = [
   'fileSharing',
   'onlineStorage',
   'other',
+  'remoteAccess',
   'utilities',
   'compression',
   'developerTools'
@@ -146,6 +152,7 @@ export const categoryMap: Record<string, string> = {
   'fileSharing': 'File Sharing',
   'onlineStorage': 'Online Storage',
   'other': 'Other',
+  'remoteAccess': 'Remote Access',
   'utilities': 'Utilities',
   'compression': 'Compression',
   'developerTools': 'Developer Tools'
