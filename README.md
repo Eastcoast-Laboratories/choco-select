@@ -1,46 +1,130 @@
-# Getting Started with Create React App
+# Choco-Select 🍫
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Ninite.com clone for Chocolatey package manager. Select your favorite Windows applications and generate a single Chocolatey installation command.
 
-## Available Scripts
+\![Choco-Select](https://img.shields.io/badge/Status-Active-success)
+\![License](https://img.shields.io/badge/License-MIT-blue)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- 🎯 **Easy Selection**: Browse and select from 100+ popular Windows applications
+- 📦 **Organized Categories**: Applications grouped by category (Browsers, Developer Tools, Media, etc.)
+- 🔄 **One-Click Install**: Generate a single Chocolatey command to install all selected apps
+- 📋 **Copy to Clipboard**: Easily copy the generated command
+- 🎨 **Modern UI**: Clean, responsive interface built with Material-UI
+- 🚀 **Fast & Lightweight**: Built with React and TypeScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Quick Start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+```bash
+# Clone the repository
+git clone git@github.com:Eastcoast-Laboratories/choco-select.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Navigate to project directory
+cd choco-select
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start development server
+npm start
+```
 
-### `npm run eject`
+The application will open at [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Browse Applications**: Navigate through different categories or view all applications
+2. **Select Apps**: Click on the applications you want to install
+3. **Generate Command**: The Chocolatey installation command is automatically generated
+4. **Copy & Run**: Copy the command and run it in an elevated PowerShell/Command Prompt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Example Generated Command
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+choco install googlechrome firefox vscode git 7zip vlc -y
+```
 
-## Learn More
+## Installing Chocolatey
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you don't have Chocolatey installed yet, visit [chocolatey.org/install](https://chocolatey.org/install) for installation instructions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Quick install (run in elevated PowerShell):
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+## Available Categories
+
+- **Web Browsers**: Chrome, Firefox, Edge, Opera, Brave
+- **Messaging**: Zoom, Discord, Teams, Thunderbird
+- **Media**: VLC, Spotify, iTunes, Audacity, HandBrake
+- **Imaging**: GIMP, Inkscape, Blender, Paint.NET, Krita
+- **Documents**: LibreOffice, Foxit Reader, SumatraPDF
+- **Security**: Malwarebytes, Avast, AVG
+- **Developer Tools**: VS Code, Git, Python, Notepad++, PuTTY
+- **Utilities**: 7-Zip, CCleaner, TeamViewer, AnyDesk
+- **And many more...**
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build` folder.
+
+## Technology Stack
+
+- **React** - UI framework
+- **TypeScript** - Type safety
+- **Material-UI** - Component library
+- **Create React App** - Build tooling
+
+## Contributing
+
+Contributions are welcome\! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Roadmap
+
+- [ ] Add search functionality
+- [ ] Add package descriptions and version info
+- [ ] Dark mode support
+- [ ] Save/load selection profiles
+- [ ] Export to script file
+- [ ] Add more packages
+- [ ] Real package icons
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Inspired by [Ninite.com](https://ninite.com)
+- Powered by [Chocolatey](https://chocolatey.org)
+- Built with [Material-UI](https://mui.com)
+
+## Support
+
+If you find this project helpful, please give it a ⭐️\!
+
+For issues and feature requests, please use the [GitHub Issues](https://github.com/Eastcoast-Laboratories/choco-select/issues) page.
+
+---
+
+Made with ❤️ by Eastcoast Laboratories
