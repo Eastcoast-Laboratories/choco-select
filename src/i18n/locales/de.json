@@ -1,0 +1,31 @@
+{
+  "app": {
+    "title": "Choco-Select",
+    "subtitle": "Wählen Sie die gewünschten Programme aus",
+    "description": "Wählen Sie die gewünschten Programme aus und generieren Sie den Chocolatey-Installationsbefehl.",
+    "footer": "Choco Select - Ein Open-Source-Projekt"
+  },
+  "command": {
+    "title": "Chocolatey Installationsbefehl",
+    "copy": "Befehl kopieren",
+    "install": "Chocolatey installieren",
+    "note": "Hinweis: Stellen Sie sicher, dass Chocolatey installiert ist, bevor Sie den Befehl ausführen. Klicken Sie auf 'Chocolatey installieren' für Anweisungen."
+  },
+  "categories": {
+    "webBrowsers": "Web Browser",
+    "messaging": "Messaging",
+    "media": "Medien",
+    "imaging": "Bildbearbeitung",
+    "documents": "Dokumente",
+    "security": "Sicherheit",
+    "fileSharing": "Dateifreigabe",
+    "onlineStorage": "Online-Speicher",
+    "other": "Sonstiges",
+    "utilities": "Dienstprogramme",
+    "compression": "Komprimierung",
+    "developerTools": "Entwicklertools"
+  },
+  "header": {
+    "github": "GitHub"
+  }
+}

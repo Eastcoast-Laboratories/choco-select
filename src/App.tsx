@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Box, Container, CssBaseline, ThemeProvider, createTheme, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Header } from './components/Header/Header';
 import { PackageList } from './components/PackageList/PackageList';
 import { CommandGenerator } from './components/CommandGenerator/CommandGenerator';
 import { packages } from './data/packages';
+import './i18n/config';
 
 const theme = createTheme({
   palette: {
@@ -31,6 +33,7 @@ const theme = createTheme({
 });
 
 function App() {
+  const { t } = useTranslation();
   const [selectedPackages, setSelectedPackages] = useState<string[]>([]);
 
   const handlePackageToggle = (id: string) => {
@@ -49,10 +52,10 @@ function App() {
         <Box component="main" sx={{ flex: 1, py: 4 }}>
           <Container maxWidth="lg">
             <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
-              Wählen Sie die gewünschten Programme aus
+              {t('app.subtitle')}
             </Typography>
             <Typography variant="body1" align="center" color="text.secondary" paragraph sx={{ mb: 4 }}>
-              Wählen Sie die gewünschten Programme aus und generieren Sie den Chocolatey-Installationsbefehl.
+              {t('app.description')}
             </Typography>
           </Container>
           
@@ -71,7 +74,7 @@ function App() {
         <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
           <Container maxWidth="lg">
             <Typography variant="body2" color="text.secondary" align="center">
-              {new Date().getFullYear()} - Choco Select - Ein Open-Source-Projekt
+              {new Date().getFullYear()} - {t('app.footer')}
             </Typography>
           </Container>
         </Box>

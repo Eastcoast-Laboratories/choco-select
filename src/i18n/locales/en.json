@@ -1,0 +1,31 @@
+{
+  "app": {
+    "title": "Choco-Select",
+    "subtitle": "Select your desired programs",
+    "description": "Select your desired programs and generate the Chocolatey installation command.",
+    "footer": "Choco Select - An Open Source Project"
+  },
+  "command": {
+    "title": "Chocolatey Installation Command",
+    "copy": "Copy Command",
+    "install": "Install Chocolatey",
+    "note": "Note: Make sure Chocolatey is installed before running the command. Click 'Install Chocolatey' for instructions."
+  },
+  "categories": {
+    "webBrowsers": "Web Browsers",
+    "messaging": "Messaging",
+    "media": "Media",
+    "imaging": "Imaging",
+    "documents": "Documents",
+    "security": "Security",
+    "fileSharing": "File Sharing",
+    "onlineStorage": "Online Storage",
+    "other": "Other",
+    "utilities": "Utilities",
+    "compression": "Compression",
+    "developerTools": "Developer Tools"
+  },
+  "header": {
+    "github": "GitHub"
+  }
+}

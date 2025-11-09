@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Paper, Typography, IconButton, Tooltip } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { useTranslation } from 'react-i18next';
 import { Package } from '../../data/packages';
 
 interface CommandGeneratorProps {
@@ -9,6 +10,7 @@ interface CommandGeneratorProps {
 }
 
 export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPackages, packages }) => {
+  const { t } = useTranslation();
   const getChocolateyCommand = () => {
     if (selectedPackages.length === 0) return '';
     
@@ -33,7 +35,7 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
   return (
     <Paper elevation={3} sx={{ p: 3, mt: 4, maxWidth: 1200, margin: '20px auto' }}>
       <Typography variant="h6" gutterBottom>
-        Chocolatey Installationsbefehl
+        {t('command.title')}
       </Typography>
       <Box
         sx={{
@@ -49,7 +51,7 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
         <Typography component="pre" sx={{ m: 0, flex: 1, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
           {command}
         </Typography>
-        <Tooltip title="In die Zwischenablage kopieren">
+        <Tooltip title={t('command.copy')}>
           <IconButton onClick={handleCopyToClipboard} color="primary">
             <ContentCopyIcon />
           </IconButton>
@@ -63,7 +65,7 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
           startIcon={<ContentCopyIcon />}
           sx={{ mr: 2 }}
         >
-          Befehl kopieren
+          {t('command.copy')}
         </Button>
         <Button
           variant="outlined"
@@ -72,12 +74,11 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
           target="_blank"
           rel="noopener noreferrer"
         >
-          Chocolatey installieren
+          {t('command.install')}
         </Button>
       </Box>
       <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-        Hinweis: Stellen Sie sicher, dass Chocolatey installiert ist, bevor Sie den Befehl ausführen.
-        Klicken Sie auf "Chocolatey installieren" für Anweisungen.
+        {t('command.note')}
       </Typography>
     </Paper>
   );

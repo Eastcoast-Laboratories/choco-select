@@ -52,7 +52,9 @@ export const packages: Package[] = [
   // Documents
   { id: 'foxitreader', name: 'Foxit Reader', description: 'Alternative PDF Reader', category: 'Documents', icon: 'foxit', chocoPackage: 'foxitreader' },
   { id: 'libreoffice', name: 'LibreOffice', description: 'Free Office Suite', category: 'Documents', icon: 'libreoffice', chocoPackage: 'libreoffice-fresh' },
+  { id: 'onlyoffice', name: 'OnlyOffice', description: 'Office Suite', category: 'Documents', icon: 'onlyoffice', chocoPackage: 'onlyoffice' },
   { id: 'sumatrapdf', name: 'SumatraPDF', description: 'Lightweight PDF Reader', category: 'Documents', icon: 'sumatra', chocoPackage: 'sumatrapdf' },
+  { id: 'pdf24', name: 'PDF24', description: 'PDF Creator and Converter', category: 'Documents', icon: 'pdf24', chocoPackage: 'pdf24' },
   { id: 'cutepdf', name: 'CutePDF', description: 'Print Documents as PDF Files', category: 'Documents', icon: 'cutepdf', chocoPackage: 'cutepdf' },
   { id: 'openoffice', name: 'OpenOffice', description: 'Free Office Suite', category: 'Documents', icon: 'openoffice', chocoPackage: 'openoffice' },
 
@@ -116,17 +118,33 @@ export const packages: Package[] = [
   { id: 'affinity', name: 'Affinity Designer', description: 'Professional Graphic Design', category: 'Imaging', icon: 'affinity', chocoPackage: 'affinity-designer' },
 ];
 
-export const categories = [
-  'Web Browsers',
-  'Messaging',
-  'Media',
-  'Imaging',
-  'Documents',
-  'Security',
-  'File Sharing',
-  'Online Storage',
-  'Other',
-  'Utilities',
-  'Compression',
-  'Developer Tools'
+export const categoryKeys = [
+  'webBrowsers',
+  'messaging',
+  'media',
+  'imaging',
+  'documents',
+  'security',
+  'fileSharing',
+  'onlineStorage',
+  'other',
+  'utilities',
+  'compression',
+  'developerTools'
 ];
+
+// Map category keys to internal category names (for filtering)
+export const categoryMap: Record<string, string> = {
+  'webBrowsers': 'Web Browsers',
+  'messaging': 'Messaging',
+  'media': 'Media',
+  'imaging': 'Imaging',
+  'documents': 'Documents',
+  'security': 'Security',
+  'fileSharing': 'File Sharing',
+  'onlineStorage': 'Online Storage',
+  'other': 'Other',
+  'utilities': 'Utilities',
+  'compression': 'Compression',
+  'developerTools': 'Developer Tools'
+};

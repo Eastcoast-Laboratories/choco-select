@@ -1,8 +1,10 @@
 import React from 'react';
 import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
+import { useTranslation } from 'react-i18next';
 
 export const Header: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <AppBar position="static" color="default" elevation={1}>
       <Container maxWidth="lg">
@@ -51,12 +53,12 @@ export const Header: React.FC = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Button
-              href="https://github.com/yourusername/choco-select"
+              href="https://github.com/Eastcoast-Laboratories/choco-select"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
             >
-              GitHub
+              {t('header.github')}
             </Button>
           </Box>
         </Toolbar>
