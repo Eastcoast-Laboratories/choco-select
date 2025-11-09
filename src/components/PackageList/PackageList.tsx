@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, List, Paper, Tab, Tabs, Typography } from '@mui/material';
-import { Package, packages, categories } from '../../data/packages';
+import { packages, categories } from '../../data/packages';
 import { PackageItem } from '../PackageItem/PackageItem';
 
 interface PackageListProps {
