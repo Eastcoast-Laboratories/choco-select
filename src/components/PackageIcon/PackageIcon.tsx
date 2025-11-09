@@ -1,5 +1,5 @@
-import React from 'react';
-import { Avatar } from '@mui/material';
+import React, { useState } from 'react';
+import { Avatar, Box } from '@mui/material';
 
 interface PackageIconProps {
   name: string;
@@ -17,6 +17,9 @@ const stringToColor = (str: string): string => {
 };
 
 export const PackageIcon: React.FC<PackageIconProps> = ({ name, icon }) => {
+  const [imageError, setImageError] = useState(false);
+  const iconPath = `/icons/${icon}.png`;
+
   const initials = name
     .split(' ')
     .map(word => word[0])
@@ -24,6 +27,24 @@ export const PackageIcon: React.FC<PackageIconProps> = ({ name, icon }) => {
     .substring(0, 2)
     .toUpperCase();
 
+  // Try to load the real icon first, fallback to avatar if it fails
+  if (!imageError) {
+    return (
+      <Box
+        component="img"
+        src={iconPath}
+        alt={`${name} icon`}
+        onError={() => setImageError(true)}
+        sx={{
+          width: 40,
+          height: 40,
+          objectFit: 'contain',
+        }}
+      />
+    );
+  }
+
+  // Fallback to colored avatar with initials
   return (
     <Avatar
       sx={{

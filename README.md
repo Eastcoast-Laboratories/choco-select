@@ -1,68 +1,74 @@
 # Choco-Select 🍫
 
-A Ninite.com clone for Chocolatey package manager. Select your favorite Windows applications and generate a single Chocolatey installation command.
+Ein Ninite.com-Klon für den Chocolatey-Paketmanager. Wählen Sie Ihre bevorzugten Windows-Anwendungen aus und generieren Sie einen einzigen Chocolatey-Installationsbefehl.
 
 \![Choco-Select](https://img.shields.io/badge/Status-Active-success)
 \![License](https://img.shields.io/badge/License-MIT-blue)
 
-## Features
+## Was ist Choco-Select?
 
-- 🎯 **Easy Selection**: Browse and select from 100+ popular Windows applications
-- 📦 **Organized Categories**: Applications grouped by category (Browsers, Developer Tools, Media, etc.)
-- 🔄 **One-Click Install**: Generate a single Chocolatey command to install all selected apps
-- 📋 **Copy to Clipboard**: Easily copy the generated command
-- 🎨 **Modern UI**: Clean, responsive interface built with Material-UI
-- 🚀 **Fast & Lightweight**: Built with React and TypeScript
+Choco-Select ist eine Webanwendung, die es Ihnen ermöglicht, aus über 100 beliebten Windows-Anwendungen auszuwählen und automatisch einen Chocolatey-Installationsbefehl zu generieren. Ähnlich wie Ninite.com, aber für Chocolatey - den leistungsstarken Paketmanager für Windows.
 
-## Quick Start
+### Hauptfunktionen
 
-### Prerequisites
+- 🎯 **Einfache Auswahl**: Durchsuchen und wählen Sie aus über 100 beliebten Windows-Anwendungen
+- 📦 **Organisierte Kategorien**: Anwendungen nach Kategorien gruppiert (Browser, Entwicklertools, Medien, etc.)
+- 🔄 **Ein-Klick-Installation**: Generieren Sie einen einzigen Chocolatey-Befehl für alle ausgewählten Apps
+- 📋 **In Zwischenablage kopieren**: Kopieren Sie den generierten Befehl einfach
+- 🎨 **Moderne Benutzeroberfläche**: Sauberes, responsives Interface mit Material-UI
+- 🚀 **Schnell & Leichtgewichtig**: Gebaut mit React und TypeScript
 
-- Node.js (v14 or higher)
-- npm or yarn
+## Installation und Start
 
-### Installation
+### Voraussetzungen
 
-```bash
-# Clone the repository
-git clone git@github.com:Eastcoast-Laboratories/choco-select.git
+- Node.js (Version 14 oder höher) - [Download hier](https://nodejs.org/)
+- npm (wird automatisch mit Node.js installiert)
 
-# Navigate to project directory
-cd choco-select
+### Schritt-für-Schritt Anleitung
 
-# Install dependencies
-npm install
+1. **Repository klonen**
+   ```bash
+   git clone git@github.com:Eastcoast-Laboratories/choco-select.git
+   cd choco-select
+   ```
 
-# Start development server
-npm start
-```
+2. **Abhängigkeiten installieren**
+   ```bash
+   npm install
+   ```
 
-The application will open at [http://localhost:3000](http://localhost:3000)
+3. **Entwicklungsserver starten**
+   ```bash
+   npm start
+   ```
 
-## Usage
+4. **Fertig\!** Die Anwendung öffnet sich automatisch im Browser unter [http://localhost:3000](http://localhost:3000)
 
-1. **Browse Applications**: Navigate through different categories or view all applications
-2. **Select Apps**: Click on the applications you want to install
-3. **Generate Command**: The Chocolatey installation command is automatically generated
-4. **Copy & Run**: Copy the command and run it in an elevated PowerShell/Command Prompt
+## Benutzung
 
-### Example Generated Command
+1. **Anwendungen durchsuchen**: Navigieren Sie durch verschiedene Kategorien oder sehen Sie alle Anwendungen an
+2. **Apps auswählen**: Klicken Sie auf die Anwendungen, die Sie installieren möchten
+3. **Befehl generieren**: Der Chocolatey-Installationsbefehl wird automatisch generiert
+4. **Kopieren & Ausführen**: Kopieren Sie den Befehl und führen Sie ihn in einer erhöhten PowerShell/Eingabeaufforderung aus
+
+### Beispiel für einen generierten Befehl
 
 ```bash
 choco install googlechrome firefox vscode git 7zip vlc -y
 ```
 
-## Installing Chocolatey
+## Chocolatey installieren
 
-If you don't have Chocolatey installed yet, visit [chocolatey.org/install](https://chocolatey.org/install) for installation instructions.
+Falls Sie Chocolatey noch nicht installiert haben, besuchen Sie [chocolatey.org/install](https://chocolatey.org/install) für Installationsanweisungen.
 
-Quick install (run in elevated PowerShell):
+Schnellinstallation (in erhöhter PowerShell ausführen):
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-## Available Categories
+## Verfügbare Kategorien
 
 - **Web Browsers**: Chrome, Firefox, Edge, Opera, Brave
 - **Messaging**: Zoom, Discord, Teams, Thunderbird
@@ -72,58 +78,58 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 - **Security**: Malwarebytes, Avast, AVG
 - **Developer Tools**: VS Code, Git, Python, Notepad++, PuTTY
 - **Utilities**: 7-Zip, CCleaner, TeamViewer, AnyDesk
-- **And many more...**
+- **Und viele mehr...**
 
-## Building for Production
+## Für Produktion bauen
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `build` folder.
+Dies erstellt einen optimierten Produktions-Build im `build`-Ordner.
 
-## Technology Stack
+## Technologie-Stack
 
-- **React** - UI framework
-- **TypeScript** - Type safety
-- **Material-UI** - Component library
-- **Create React App** - Build tooling
+- **React** - UI Framework
+- **TypeScript** - Typsicherheit
+- **Material-UI** - Komponentenbibliothek
+- **Create React App** - Build-Tooling
 
-## Contributing
+## Mitwirken
 
-Contributions are welcome\! Please feel free to submit a Pull Request.
+Beiträge sind willkommen\! Bitte erstellen Sie gerne einen Pull Request.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Repository forken
+2. Feature-Branch erstellen (`git checkout -b feature/NeuesFeature`)
+3. Änderungen committen (`git commit -m 'Füge neues Feature hinzu'`)
+4. Branch pushen (`git push origin feature/NeuesFeature`)
+5. Pull Request öffnen
 
 ## Roadmap
 
-- [ ] Add search functionality
-- [ ] Add package descriptions and version info
-- [ ] Dark mode support
-- [ ] Save/load selection profiles
-- [ ] Export to script file
-- [ ] Add more packages
-- [ ] Real package icons
+- [ ] Suchfunktion hinzufügen
+- [ ] Paketbeschreibungen und Versionsinformationen
+- [ ] Dark Mode Unterstützung
+- [ ] Auswahl-Profile speichern/laden
+- [ ] Export in Skriptdatei
+- [ ] Weitere Pakete hinzufügen
+- [ ] Echte Paket-Icons
 
-## License
+## Lizenz
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die LICENSE-Datei für Details.
 
-## Acknowledgments
+## Danksagungen
 
-- Inspired by [Ninite.com](https://ninite.com)
+- Inspiriert von [Ninite.com](https://ninite.com)
 - Powered by [Chocolatey](https://chocolatey.org)
-- Built with [Material-UI](https://mui.com)
+- Gebaut mit [Material-UI](https://mui.com)
 
 ## Support
 
-If you find this project helpful, please give it a ⭐️\!
+Wenn Sie dieses Projekt hilfreich finden, geben Sie ihm bitte einen ⭐️\!
 
-For issues and feature requests, please use the [GitHub Issues](https://github.com/Eastcoast-Laboratories/choco-select/issues) page.
+Für Probleme und Feature-Anfragen nutzen Sie bitte die [GitHub Issues](https://github.com/Eastcoast-Laboratories/choco-select/issues) Seite.
 
 ---
 
