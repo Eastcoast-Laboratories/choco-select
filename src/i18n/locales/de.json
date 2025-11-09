@@ -8,6 +8,7 @@
   "command": {
     "title": "Chocolatey Installationsbefehl",
     "copy": "Befehl kopieren",
+    "download": ".BAT-Datei herunterladen",
     "install": "Chocolatey installieren",
     "note": "Hinweis: Stellen Sie sicher, dass Chocolatey installiert ist, bevor Sie den Befehl ausführen. Klicken Sie auf 'Chocolatey installieren' für Anweisungen."
   },

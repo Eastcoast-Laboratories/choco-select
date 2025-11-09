@@ -8,6 +8,7 @@
   "command": {
     "title": "Chocolatey Installation Command",
     "copy": "Copy Command",
+    "download": "Download .BAT File",
     "install": "Install Chocolatey",
     "note": "Note: Make sure Chocolatey is installed before running the command. Click 'Install Chocolatey' for instructions."
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Paper, Typography, IconButton, Tooltip } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import DownloadIcon from '@mui/icons-material/Download';
 import { useTranslation } from 'react-i18next';
 import { Package } from '../../data/packages';
 
@@ -26,6 +27,46 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(command);
+  };
+
+  const handleDownloadBat = () => {
+    const batContent = `@echo off
+echo ========================================
+echo Choco-Select Installation Script
+echo ========================================
+echo.
+echo Installing selected packages...
+echo.
+
+REM Check if Chocolatey is installed
+where choco >nul 2>nul
+if %ERRORLEVEL% NEQ 0 (
+    echo ERROR: Chocolatey is not installed!
+    echo Please install Chocolatey first from: https://chocolatey.org/install
+    echo.
+    pause
+    exit /b 1
+)
+
+REM Install selected packages
+${command}
+
+echo.
+echo ========================================
+echo Installation completed!
+echo ========================================
+pause
+`;
+
+    const blob = new Blob([batContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'choco-install.bat';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   if (selectedPackages.length === 0) {
@@ -57,15 +98,22 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
           </IconButton>
         </Tooltip>
       </Box>
-      <Box sx={{ mt: 2 }}>
+      <Box sx={{ mt: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
         <Button
           variant="contained"
           color="primary"
           onClick={handleCopyToClipboard}
           startIcon={<ContentCopyIcon />}
-          sx={{ mr: 2 }}
         >
           {t('command.copy')}
+        </Button>
+        <Button
+          variant="contained"
+          color="success"
+          onClick={handleDownloadBat}
+          startIcon={<DownloadIcon />}
+        >
+          {t('command.download')}
         </Button>
         <Button
           variant="outlined"
