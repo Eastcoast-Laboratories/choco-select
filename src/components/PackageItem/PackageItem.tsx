@@ -1,6 +1,7 @@
 import React from 'react';
-import { Checkbox, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { Checkbox, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, Box } from '@mui/material';
 import { Package } from '../../data/packages';
+import { PackageIcon } from '../PackageIcon/PackageIcon';
 
 interface PackageItemProps {
   pkg: Package;
@@ -33,6 +34,9 @@ export const PackageItem: React.FC<PackageItemProps> = ({ pkg, isSelected, onTog
             inputProps={{ 'aria-labelledby': `checkbox-list-label-${pkg.id}` }}
           />
         </ListItemIcon>
+        <Box sx={{ mr: 2 }}>
+          <PackageIcon name={pkg.name} icon={pkg.icon} />
+        </Box>
         <ListItemText
           id={`checkbox-list-label-${pkg.id}`}
           primary={
