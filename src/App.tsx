@@ -46,24 +46,28 @@ function App() {
       <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
-        <Container component="main" sx={{ flex: 1, py: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 4 }}>
-            Wählen Sie die gewünschten Programme aus
-          </Typography>
-          <Typography variant="body1" align="center" color="text.secondary" paragraph>
-            Wählen Sie die gewünschten Programme aus und generieren Sie den Chocolatey-Installationsbefehl.
-          </Typography>
+        <Box component="main" sx={{ flex: 1, py: 4 }}>
+          <Container maxWidth="lg">
+            <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
+              Wählen Sie die gewünschten Programme aus
+            </Typography>
+            <Typography variant="body1" align="center" color="text.secondary" paragraph sx={{ mb: 4 }}>
+              Wählen Sie die gewünschten Programme aus und generieren Sie den Chocolatey-Installationsbefehl.
+            </Typography>
+          </Container>
           
           <PackageList 
             selectedPackages={selectedPackages} 
             onPackageToggle={handlePackageToggle} 
           />
           
-          <CommandGenerator 
-            selectedPackages={selectedPackages} 
-            packages={packages} 
-          />
-        </Container>
+          <Container maxWidth="lg">
+            <CommandGenerator 
+              selectedPackages={selectedPackages} 
+              packages={packages} 
+            />
+          </Container>
+        </Box>
         <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
           <Container maxWidth="lg">
             <Typography variant="body2" color="text.secondary" align="center">
