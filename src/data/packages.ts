@@ -85,6 +85,7 @@ export const packages: Package[] = [
   // Utilities
   { id: 'anydesk', name: 'AnyDesk', description: 'Remote Desktop', category: 'Utilities', icon: 'anydesk', chocoPackage: 'anydesk' },
   { id: 'teamviewer', name: 'TeamViewer 15', description: 'Remote Access Tool', category: 'Utilities', icon: 'teamviewer', chocoPackage: 'teamviewer' },
+  { id: 'realvnc', name: 'RealVNC', description: 'RealVNC Remote Access', category: 'Utilities', icon: 'realvnc', chocoPackage: 'realvnc' },
   { id: 'imgburn', name: 'ImgBurn', description: 'Disc Burner', category: 'Utilities', icon: 'imgburn', chocoPackage: 'imgburn' },
   { id: 'teracopy', name: 'TeraCopy', description: 'Better File Copy', category: 'Utilities', icon: 'teracopy', chocoPackage: 'teracopy' },
   { id: 'cdburnerxp', name: 'CDBurnerXP', description: 'Disc Burner', category: 'Utilities', icon: 'cdburnerxp', chocoPackage: 'cdburnerxp' },
@@ -92,6 +93,7 @@ export const packages: Package[] = [
   { id: 'windirstat', name: 'WinDirStat', description: 'Directory Statistics', category: 'Utilities', icon: 'windirstat', chocoPackage: 'windirstat' },
   { id: 'wiztree', name: 'WizTree', description: 'Directory Statistics', category: 'Utilities', icon: 'wiztree', chocoPackage: 'wiztree' },
   { id: 'glary', name: 'Glary', description: 'System Utilities', category: 'Utilities', icon: 'glary', chocoPackage: 'glaryutilities' },
+  { id: 'openshell', name: 'Open-Shell', description: 'Old-Style Start Menu', category: 'Utilities', icon: 'openshell', chocoPackage: 'open-shell' },
   { id: 'ccleaner', name: 'CCleaner', description: 'PC Crap Remover', category: 'Utilities', icon: 'ccleaner', chocoPackage: 'ccleaner' },
 
   // Compression
