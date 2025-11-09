@@ -108,6 +108,7 @@ export const packages: Package[] = [
   // Developer Tools
   { id: 'python3', name: 'Python 3', description: 'Programming Language', category: 'Developer Tools', icon: 'python', chocoPackage: 'python' },
   { id: 'python2', name: 'Python 2', description: 'Great Programming Language', category: 'Developer Tools', icon: 'python', chocoPackage: 'python2' },
+  { id: 'autohotkey', name: 'AutoHotkey', description: 'Automation Scripting Language', category: 'Developer Tools', icon: 'autohotkey', chocoPackage: 'autohotkey' },
   { id: 'git', name: 'Git', description: 'Version Control System', category: 'Developer Tools', icon: 'git', chocoPackage: 'git' },
   { id: 'filezilla', name: 'FileZilla', description: 'FTP Client', category: 'Developer Tools', icon: 'filezilla', chocoPackage: 'filezilla' },
   { id: 'notepadplusplus', name: 'Notepad++', description: 'Programmer\'s Editor', category: 'Developer Tools', icon: 'notepadplusplus', chocoPackage: 'notepadplusplus' },
