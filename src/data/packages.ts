@@ -109,6 +109,11 @@ export const packages: Package[] = [
   { id: 'eclipse', name: 'Eclipse', description: 'IDE for Java', category: 'Developer Tools', icon: 'eclipse', chocoPackage: 'eclipse' },
   { id: 'vscode', name: 'Visual Studio Code', description: 'Programmer\'s Editor', category: 'Developer Tools', icon: 'vscode', chocoPackage: 'vscode' },
   { id: 'cursor', name: 'Cursor', description: 'Programmer\'s Editor', category: 'Developer Tools', icon: 'cursor', chocoPackage: 'cursor' },
+  
+  // Additional Tools
+  { id: 'rustdesk', name: 'RustDesk', description: 'Open Source Remote Desktop', category: 'Utilities', icon: 'rustdesk', chocoPackage: 'rustdesk' },
+  { id: 'totalcommander', name: 'Total Commander', description: 'File Manager', category: 'Utilities', icon: 'totalcommander', chocoPackage: 'totalcommander' },
+  { id: 'affinity', name: 'Affinity Designer', description: 'Professional Graphic Design', category: 'Imaging', icon: 'affinity', chocoPackage: 'affinity-designer' },
 ];
 
 export const categories = [
