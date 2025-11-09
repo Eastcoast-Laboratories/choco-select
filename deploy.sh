@@ -3,8 +3,8 @@ set -e
 
 echo "🚀 Deploying to production server..."
 
-# Change to project directory
-cd "$(dirname "$0")/choco-ninite-clone"
+# Change to project directory (we're already in it)
+cd "$(dirname "$0")"
 
 # 1. Commit and push to GitHub
 echo "📤 Step 1: Pushing to GitHub..."
