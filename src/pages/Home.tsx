@@ -18,16 +18,7 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <Box component="main" sx={{ flex: 1, py: 4 }}>
-      <Container maxWidth="lg">
-        <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
-          {t('app.subtitle')}
-        </Typography>
-        <Typography variant="body1" align="center" color="text.secondary" paragraph sx={{ mb: 4 }}>
-          {t('app.description')}
-        </Typography>
-      </Container>
-      
+    <Box component="main" sx={{ flex: 1, py: 2 }}>
       <Box sx={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'background.default', py: 1 }}>
         <Container maxWidth="lg">
           <CommandGenerator 

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Button, Paper, Typography } from '@mui/material';
+import { Box, Button, IconButton, Paper, Tooltip, Typography } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DownloadIcon from '@mui/icons-material/Download';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { useTranslation } from 'react-i18next';
 import { Package } from '../../data/packages';
 
@@ -144,10 +145,12 @@ pause
           {t('command.install')}
         </Button>
         
-        {/* Note */}
-        <Typography variant="caption" color="text.secondary" sx={{ ml: 'auto', maxWidth: '300px' }}>
-          {t('command.note')}
-        </Typography>
+        {/* Help Icon with Tooltip */}
+        <Tooltip title={t('command.note')} arrow placement="bottom">
+          <IconButton size="small" color="primary">
+            <HelpOutlineIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
       </Box>
     </Paper>
   );
