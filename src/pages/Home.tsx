@@ -1,0 +1,46 @@
+import React, { useState } from 'react';
+import { Box, Container, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { PackageList } from '../components/PackageList/PackageList';
+import { CommandGenerator } from '../components/CommandGenerator/CommandGenerator';
+import { packages } from '../data/packages';
+
+export const Home: React.FC = () => {
+  const { t } = useTranslation();
+  const [selectedPackages, setSelectedPackages] = useState<string[]>([]);
+
+  const handlePackageToggle = (id: string) => {
+    setSelectedPackages(prev => 
+      prev.includes(id) 
+        ? prev.filter(pkgId => pkgId !== id)
+        : [...prev, id]
+    );
+  };
+
+  return (
+    <Box component="main" sx={{ flex: 1, py: 4 }}>
+      <Container maxWidth="lg">
+        <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
+          {t('app.subtitle')}
+        </Typography>
+        <Typography variant="body1" align="center" color="text.secondary" paragraph sx={{ mb: 4 }}>
+          {t('app.description')}
+        </Typography>
+      </Container>
+      
+      <Box sx={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'background.default', py: 2 }}>
+        <Container maxWidth="lg">
+          <CommandGenerator 
+            selectedPackages={selectedPackages} 
+            packages={packages} 
+          />
+        </Container>
+      </Box>
+      
+      <PackageList 
+        selectedPackages={selectedPackages} 
+        onPackageToggle={handlePackageToggle} 
+      />
+    </Box>
+  );
+};

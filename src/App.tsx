@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Box, Container, CssBaseline, ThemeProvider, createTheme, Typography } from '@mui/material';
+import React from 'react';
+import { Box, Container, CssBaseline, Link, ThemeProvider, createTheme, Typography } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Header } from './components/Header/Header';
-import { PackageList } from './components/PackageList/PackageList';
-import { CommandGenerator } from './components/CommandGenerator/CommandGenerator';
-import { packages } from './data/packages';
+import { Home } from './pages/Home';
+import { Imprint } from './pages/Imprint';
+import { Privacy } from './pages/Privacy';
 import './i18n/config';
 
 const theme = createTheme({
@@ -34,51 +35,35 @@ const theme = createTheme({
 
 function App() {
   const { t } = useTranslation();
-  const [selectedPackages, setSelectedPackages] = useState<string[]>([]);
-
-  const handlePackageToggle = (id: string) => {
-    setSelectedPackages(prev => 
-      prev.includes(id) 
-        ? prev.filter(pkgId => pkgId !== id)
-        : [...prev, id]
-    );
-  };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Header />
-        <Box component="main" sx={{ flex: 1, py: 4 }}>
-          <Container maxWidth="lg">
-            <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
-              {t('app.subtitle')}
-            </Typography>
-            <Typography variant="body1" align="center" color="text.secondary" paragraph sx={{ mb: 4 }}>
-              {t('app.description')}
-            </Typography>
-          </Container>
-          
-          <PackageList 
-            selectedPackages={selectedPackages} 
-            onPackageToggle={handlePackageToggle} 
-          />
-          
-          <Container maxWidth="lg">
-            <CommandGenerator 
-              selectedPackages={selectedPackages} 
-              packages={packages} 
-            />
-          </Container>
+      <Router>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/imprint" element={<Imprint />} />
+            <Route path="/privacy" element={<Privacy />} />
+          </Routes>
+          <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
+            <Container maxWidth="lg">
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, mb: 1 }}>
+                <Link component={RouterLink} to="/imprint" color="text.secondary" underline="hover">
+                  {t('footer.imprint')}
+                </Link>
+                <Link component={RouterLink} to="/privacy" color="text.secondary" underline="hover">
+                  {t('footer.privacy')}
+                </Link>
+              </Box>
+              <Typography variant="body2" color="text.secondary" align="center">
+                {new Date().getFullYear()} - {t('app.footer')}
+              </Typography>
+            </Container>
+          </Box>
         </Box>
-        <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
-          <Container maxWidth="lg">
-            <Typography variant="body2" color="text.secondary" align="center">
-              {new Date().getFullYear()} - {t('app.footer')}
-            </Typography>
-          </Container>
-        </Box>
-      </Box>
+      </Router>
     </ThemeProvider>
   );
 }

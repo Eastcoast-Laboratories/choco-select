@@ -19,7 +19,7 @@
     "imaging": "Bildbearbeitung",
     "documents": "Dokumente",
     "security": "Sicherheit",
-    "fileSharing": "Dateifreigabe",
+    "fileSharing": "File Sharing",
     "onlineStorage": "Online-Speicher",
     "other": "Sonstiges",
     "remoteAccess": "Fernzugriff",
@@ -28,6 +28,37 @@
     "developerTools": "Entwicklertools"
   },
   "header": {
-    "github": "GitHub"
+    "github": "GitHub",
+    "search": "Pakete suchen..."
+  },
+  "imprint": {
+    "title": "Impressum",
+    "responsible": "Angaben gemäß § 5 TMG",
+    "contact": "Kontakt",
+    "email": "E-Mail",
+    "phone": "Telefon"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "section1": {
+      "title": "1. Datenschutz auf einen Blick",
+      "content": "Diese Website erhebt keine personenbezogenen Daten. Es werden keine Cookies gesetzt und keine Tracking-Tools verwendet. Die Nutzung dieser Website ist vollständig anonym."
+    },
+    "section2": {
+      "title": "2. Hosting",
+      "content": "Diese Website wird auf einem privaten Server gehostet. Es werden keine Zugriffsdaten gespeichert oder ausgewertet."
+    },
+    "section3": {
+      "title": "3. Externe Links",
+      "content": "Diese Website enthält Links zu externen Websites (z.B. Chocolatey.org, GitHub). Für deren Inhalte sind die jeweiligen Betreiber verantwortlich."
+    },
+    "contact": {
+      "title": "Verantwortlich für den Datenschutz",
+      "email": "E-Mail"
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
   }
 }

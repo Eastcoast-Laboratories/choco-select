@@ -28,6 +28,37 @@
     "developerTools": "Developer Tools"
   },
   "header": {
-    "github": "GitHub"
+    "github": "GitHub",
+    "search": "Search packages..."
+  },
+  "imprint": {
+    "title": "Imprint",
+    "responsible": "Information according to § 5 TMG",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Privacy at a Glance",
+      "content": "This website does not collect any personal data. No cookies are set and no tracking tools are used. The use of this website is completely anonymous."
+    },
+    "section2": {
+      "title": "2. Hosting",
+      "content": "This website is hosted on a private server. No access data is stored or analyzed."
+    },
+    "section3": {
+      "title": "3. External Links",
+      "content": "This website contains links to external websites (e.g. Chocolatey.org, GitHub). The respective operators are responsible for their content."
+    },
+    "contact": {
+      "title": "Responsible for Data Protection",
+      "email": "Email"
+    }
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy"
   }
 }

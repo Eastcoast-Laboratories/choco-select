@@ -31,6 +31,19 @@ export const CommandGenerator: React.FC<CommandGeneratorProps> = ({ selectedPack
 
   const handleDownloadBat = () => {
     const batContent = `@echo off
+REM Check for administrator privileges
+net session >nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    echo ========================================
+    echo ERROR: Administrator privileges required!
+    echo ========================================
+    echo.
+    echo Please right-click this file and select "Run as administrator"
+    echo.
+    pause
+    exit /b 1
+)
+
 echo ========================================
 echo Choco-Select Installation Script
 echo ========================================
