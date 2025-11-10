@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Box, Container, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { Box, Container } from '@mui/material';
 import { PackageList } from '../components/PackageList/PackageList';
 import { CommandGenerator } from '../components/CommandGenerator/CommandGenerator';
 import { packages } from '../data/packages';
 
 export const Home: React.FC = () => {
-  const { t } = useTranslation();
   const [selectedPackages, setSelectedPackages] = useState<string[]>([]);
 
   const handlePackageToggle = (id: string) => {
