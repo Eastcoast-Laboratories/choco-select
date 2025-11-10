@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Paper, Typography, IconButton, Tooltip } from '@mui/material';
+import { Box, Button, Paper, Typography } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DownloadIcon from '@mui/icons-material/Download';
 import { useTranslation } from 'react-i18next';
