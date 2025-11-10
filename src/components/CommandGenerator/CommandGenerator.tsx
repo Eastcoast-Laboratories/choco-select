@@ -87,33 +87,37 @@ pause
   }
 
   return (
-    <Paper elevation={3} sx={{ p: 3, mt: 4, maxWidth: 1200, margin: '20px auto' }}>
-      <Typography variant="h6" gutterBottom>
-        {t('command.title')}
-      </Typography>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: '#f5f5f5',
-          p: 2,
-          borderRadius: 1,
-          fontFamily: 'monospace',
-          overflowX: 'auto',
-        }}
-      >
-        <Typography component="pre" sx={{ m: 0, flex: 1, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-          {command}
+    <Paper elevation={3} sx={{ p: 2, maxWidth: '100%' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
+        {/* Title */}
+        <Typography variant="subtitle1" sx={{ fontWeight: 'bold', minWidth: 'fit-content' }}>
+          {t('command.title')}:
         </Typography>
-        <Tooltip title={t('command.copy')}>
-          <IconButton onClick={handleCopyToClipboard} color="primary">
-            <ContentCopyIcon />
-          </IconButton>
-        </Tooltip>
-      </Box>
-      <Box sx={{ mt: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+        
+        {/* Command Box */}
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: '#f5f5f5',
+            px: 2,
+            py: 1,
+            borderRadius: 1,
+            fontFamily: 'monospace',
+            flex: 1,
+            minWidth: '200px',
+            maxWidth: '400px',
+          }}
+        >
+          <Typography component="pre" sx={{ m: 0, fontSize: '0.875rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {command}
+          </Typography>
+        </Box>
+        
+        {/* Buttons */}
         <Button
           variant="contained"
+          size="small"
           color="primary"
           onClick={handleCopyToClipboard}
           startIcon={<ContentCopyIcon />}
@@ -122,6 +126,7 @@ pause
         </Button>
         <Button
           variant="contained"
+          size="small"
           color="success"
           onClick={handleDownloadBat}
           startIcon={<DownloadIcon />}
@@ -130,6 +135,7 @@ pause
         </Button>
         <Button
           variant="outlined"
+          size="small"
           color="primary"
           href="https://chocolatey.org/install"
           target="_blank"
@@ -137,10 +143,12 @@ pause
         >
           {t('command.install')}
         </Button>
+        
+        {/* Note */}
+        <Typography variant="caption" color="text.secondary" sx={{ ml: 'auto', maxWidth: '300px' }}>
+          {t('command.note')}
+        </Typography>
       </Box>
-      <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-        {t('command.note')}
-      </Typography>
     </Paper>
   );
 };

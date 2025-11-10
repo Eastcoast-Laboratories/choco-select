@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
         </Typography>
       </Container>
       
-      <Box sx={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'background.default', py: 2 }}>
+      <Box sx={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'background.default', py: 1 }}>
         <Container maxWidth="lg">
           <CommandGenerator 
             selectedPackages={selectedPackages} 
